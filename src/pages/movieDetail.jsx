@@ -23,7 +23,6 @@ const MovieDetail = () => {
         <span className="overview">{overview}</span>
       </div>
     </div>
-  
   );
 };
 export default MovieDetail;
