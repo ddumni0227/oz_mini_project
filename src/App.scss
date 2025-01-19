@@ -38,11 +38,12 @@
 
 .detail {
   display: flex;
-  gap: 1rem;
-  background-color: black;
-  color: white;
+  gap: 3rem;
+  background-color: white;
+  color: black;
   padding: 1rem;
-
+  width: 100%;
+  height: 100%;
   img {
     width: 40%;
     height: auto;
@@ -54,12 +55,11 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
     gap: 1rem;
 
     > div {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
 
       h2 {
@@ -75,13 +75,12 @@
 
     .genre {
       font-size: 1rem;
-      color: white;
+      color: black;
       display: flex; /* 가로 배열 */
       flex-wrap: nowrap; /* 한 줄에 강제로 배치 */
       gap: 0.5rem; /* 요소 간 간격 */
-      overflow-x: auto; /* 한 줄에서 넘칠 경우 스크롤 활성화 */
-      white-space: nowrap;
-      max-width: 100%;
+      flex-direction: row;
+      justify-content: flex-start;
     }
 
     .genre span {
@@ -91,6 +90,29 @@
     .overview {
       font-size: 1rem;
       line-height: 1.5;
+      color: black;
+      width: 90%;
+    }
+  }
+}
+main {
+  padding: 4rem 0 0 0;
+  flex-grow: 1;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  justify-content: space-evenly;
+  a {
+    color: red;
+    font-weight: bold;
+    &:hover {
       color: white;
     }
   }
