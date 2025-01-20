@@ -6,8 +6,8 @@ import { useNavigate } from "react-router";
 const MovieHome = ({ movies }) => {
   const nav = useNavigate();
 
-  const handleCardClick = () => {
-    nav("/details"); // 클릭 시 /details로 이동
+  const handleCardClick = (movieId) => {
+    nav(`/details/${movieId}`); // 클릭 시 /details로 이동
   };
 
   //오브젝트에서 키를 지정하고 value를 받아와서 값을 넣어준다.?
@@ -15,7 +15,7 @@ const MovieHome = ({ movies }) => {
   return (
     <div className="card">
       {movies.map((movie) => (
-        <div key={movie.id} onClick={handleCardClick}>
+        <div key={movie.id} onClick={() => handleCardClick(movie.id)}>
           <MovieCard
             key={movie.id}
             poster_path={movie.poster_path}
