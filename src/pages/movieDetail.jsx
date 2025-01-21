@@ -1,21 +1,15 @@
-// import MovieDetailData from "../assets/data/movieDetailData.json";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
 const MovieDetail = () => {
   const baseUrl = "https://image.tmdb.org/t/p/original";
-  // const overview = MovieDetailData.overview;
-  // const poster = MovieDetailData.poster_path;
-  // const title = MovieDetailData.title;
-  // const average = MovieDetailData.vote_average;
-  // const genres = MovieDetailData.genres;
   const { id } = useParams(); // URL에서 영화 ID 가져오기
   const [movie, setMovie] = useState(null);
 
   const fetchMovie = async () => {
     const apiKey = import.meta.env.VITE_TMDB_ACCESS_TOKEN; // 환경변수로 API 키 불러오기
     console.log(apiKey);
-    const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
+    const url = `https://api.themoviedb.org/3/movie/${id}?language=ko-KR`;
 
     const options = {
       method: "GET",

@@ -6,9 +6,11 @@ const NavBar = () => {
       <Link className="main" to="/">
         Movie
       </Link>
-      <Link className="search">Seach🔍</Link>
-      <Link className="login">login</Link>
-      <Link className="mypage">myPage</Link>
+      <Link className="search">Search 🔍</Link>
+      <Link className="login" to="/login">
+        login
+      </Link>
+      <Link className="mypage"to="/mypage">myPage</Link>
     </nav>
   );
 };

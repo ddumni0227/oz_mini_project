@@ -11,9 +11,8 @@ function App() {
 
   const fetchMovies = async () => {
     const apiKey = import.meta.env.VITE_TMDB_ACCESS_TOKEN; // 환경변수로 API 키 불러오기
-    // console.log(apiKey);
     const url =
-      "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
+      "https://api.themoviedb.org/3/movie/popular?language=ko-KR&page=1";
 
     const options = {
       method: "GET",

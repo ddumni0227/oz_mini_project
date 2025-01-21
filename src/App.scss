@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #616161;
+  background-color: #272727;
   color: white;
   padding: 10px;
   border-radius: 8px;
@@ -33,6 +33,7 @@
 
   span {
     font-size: 1rem;
+    color: #ffcc00;
   }
 }
 
@@ -114,6 +115,7 @@ main {
     font-weight: bold;
     &:hover {
       color: white;
+      
     }
   }
 }
