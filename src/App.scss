@@ -1,3 +1,11 @@
+html {
+  background-color: black;
+}
+main {
+  padding: 4rem 0 0 0;
+  flex-grow: 1;
+}
+// 카드들
 .card {
   display: flex;
   flex-wrap: wrap;
@@ -16,12 +24,18 @@
   background-color: #272727;
   color: white;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 20px;
   text-align: center;
   transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: rgb(192, 192, 192);
+    color: black;
+  }
   img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 300px;
     border-radius: 8px;
     transition: all 0.3s ease;
   }
@@ -29,6 +43,10 @@
   h2 {
     margin: 10px 0;
     font-size: 1.2rem;
+    overflow: hidden; //텍스트 넘치면 숨김
+    text-overflow: ellipsis; //말줄임표
+    max-width: 90%; //최대너비 부모요소의 90%
+    white-space: nowrap; //텍스트한줄로 유지
   }
 
   span {
@@ -37,21 +55,23 @@
   }
 }
 
+// 영화세부정보
 .detail {
   display: flex;
   gap: 3rem;
-  background-color: white;
-  color: black;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 1rem;
   width: 100%;
   height: 100%;
+  //사진
   img {
     width: 40%;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
   }
-
+  //제목&평점
   .head {
     display: flex;
     flex-direction: column;
@@ -64,58 +84,70 @@
       align-items: center;
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin: 0;
       }
 
       p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         color: #ffcc00;
       }
     }
-
+    //장르
     .genre {
       font-size: 1rem;
-      color: black;
+      color: rgb(255, 255, 255);
       display: flex; /* 가로 배열 */
       flex-wrap: nowrap; /* 한 줄에 강제로 배치 */
       gap: 0.5rem; /* 요소 간 간격 */
       flex-direction: row;
       justify-content: flex-start;
     }
-
-    .genre span {
-      flex-shrink: 0; /* 텍스트가 줄어들지 않도록 설정 */
-    }
-
+    //줄거리
     .overview {
       font-size: 1rem;
       line-height: 1.5;
-      color: black;
-      width: 90%;
+      color: rgb(255, 255, 255);
+      width: 85%;
     }
   }
 }
-main {
-  padding: 4rem 0 0 0;
-  flex-grow: 1;
-}
+
+//navbar
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  gap: 17px;
+  padding: 10px;
   font-size: 20px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   position: fixed;
   width: 100%;
   justify-content: space-evenly;
+  //링크들
   a {
-    color: red;
+    color: rgb(255, 0, 0);
     font-weight: bold;
+    text-decoration: none;
     &:hover {
       color: white;
-      
     }
   }
+  //메인
+  .main {
+    font-size: 30px;
+  }
+
+  //검색창
+  .search {
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(51, 51, 51);
+    outline: none;
+    color: white;
+  }
+}
+@media (max-width: 768px) {
 }

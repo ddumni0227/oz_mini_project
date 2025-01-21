@@ -43,7 +43,9 @@ const MovieDetail = () => {
         </div>
         <div className="genre">
           {movie?.genres.map((genre) => (
-            <span>{genre.name},</span>
+            <span key={genre.id}>{genre.name},</span>
+            //map으로 렌더링된 span에 키가 없어서 디테일 화면을 클릭하자 에러가 발생했었음
+            //span에 키값을 주니까 해결되었음
           ))}
         </div>
         <span className="overview">{movie?.overview}</span>
