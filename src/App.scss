@@ -2,8 +2,7 @@ html {
   background-color: black;
 }
 main {
-  padding: 4rem 0 0 0;
-  flex-grow: 1;
+  padding-top: 4rem;
 }
 // 카드들
 .card {
@@ -15,18 +14,18 @@ main {
   background-color: rgb(0, 0, 0);
 }
 .movie_card {
-  width: 200px;
-  height: auto;
+  width: 200px; //카드 가로길이
+  height: auto; // 높이를 내부 컨텐츠에 맞게 자동으로 설정
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; //자식요소 위에서 아래 세로방향
+  align-items: center; //자식요소 수평가운데정렬
+  justify-content: center; //자식요소 수직가운데정렬
   background-color: #272727;
   color: white;
   padding: 10px;
   border-radius: 20px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in; // 카드 속성변화시 부드럽게 변화 적용
 
   &:hover {
     transform: scale(1.1);
@@ -36,8 +35,7 @@ main {
   img {
     width: 200px;
     height: 300px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    border-radius: 10px;
   }
 
   h2 {
@@ -68,8 +66,9 @@ main {
   img {
     width: 400px;
     height: auto;
-    object-fit: cover;
-    border-radius: 8px;
+    object-fit: cover; //이미지는 컨테이너를 다 덮고 초과된 부분은 잘림
+    border-radius: 15px;
+    border: 5px solid rgb(255, 255, 255);
   }
   //제목&평점
   .head {
@@ -78,7 +77,7 @@ main {
     width: 100%;
     gap: 1rem;
 
-    > div {
+    div {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
@@ -122,20 +121,12 @@ main {
   padding: 10px;
   font-size: 20px;
   background-color: rgb(0, 0, 0);
-  position: fixed;
+  position: fixed; //위치고정
+  top: 0;
   width: 100%;
   justify-content: space-evenly;
   z-index: 1000; //다른 요소들 올라오는거 방지
 
-  //링크들
-  a {
-    color: rgb(255, 0, 0);
-    font-weight: bold;
-    text-decoration: none;
-    &:hover {
-      color: white;
-    }
-  }
   //메인
   .main {
     img {
@@ -144,6 +135,7 @@ main {
       height: auto;
     }
   }
+
   //로그인 이미지
   .login {
     img {
@@ -203,5 +195,9 @@ main {
       width: 100%;
       height: auto; /* 비율 유지 */
     }
+  }
+  .login img,
+  .mypage img {
+    width: 35px;
   }
 }
