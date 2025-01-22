@@ -22,7 +22,7 @@ const NavBar = ({ onSearch }) => {
         }}
         //클릭시 검색창 입력한 내용을 지우고 메인화면으로 이동
       >
-        Movie
+        <img src="../../img/MOVIE.png" />
       </Link>
       {/* 검색어 입력 */}
       <input
@@ -34,10 +34,10 @@ const NavBar = ({ onSearch }) => {
       ></input>
       {/* 로그인 마이페이지 */}
       <Link className="login" to="/login">
-        login
+        <img src="../../img/LOGIN.png"/>
       </Link>
       <Link className="mypage" to="/mypage">
-        myPage
+        <img src="../../img/MYPAGE.png"/>
       </Link>
     </nav>
   );
